@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>울산미래건설TFT - 팀 홈페이지</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">울산미래건설TFT</h1>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">홈</a>
+                <a href="#gallery" class="nav-link">갤러리</a>
+                <a href="#about" class="nav-link">소개</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 배너 -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2>울산미래건설TFT</h2>
+            <p>현대자동차와 함께하는 미래 건설</p>
+        </div>
+    </section>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="container">
+        <!-- 사진 업로드 섹션 -->
+        <section class="upload-section">
+            <h2>사진 공유하기</h2>
+            <div class="upload-area">
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                <button class="upload-btn" onclick="document.getElementById('imageInput').click()">
+                    📸 사진 선택
+                </button>
+                <input type="text" id="captionInput" placeholder="사진에 대한 설명을 입력하세요...">
+                <button class="post-btn" onclick="uploadImage()">게시</button>
+            </div>
+        </section>
+
+        <!-- 피드 섹션 -->
+        <section class="feed" id="feed">
+            <!-- 사진 카드들이 여기에 동적으로 생성됩니다 -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
