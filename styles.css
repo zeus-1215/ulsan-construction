@@ -56,28 +56,50 @@ body {
 
 /* 배너 섹션 */
 .banner {
-    background: linear-gradient(rgba(30, 60, 114, 0.7), rgba(42, 82, 152, 0.7)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23e74c3c" width="600" height="400"/><rect fill="%23ecf0f1" x="600" width="600" height="400"/><circle cx="650" cy="200" r="80" fill="%23c0392b"/><circle cx="650" cy="200" r="60" fill="%23e74c3c"/><polygon points="100,200 150,100 200,200" fill="%23f39c12"/><polygon points="150,200 200,100 250,200" fill="%23f1c40f"/></svg>');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+                url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=400&fit=crop') left center / cover no-repeat,
+                url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&h=400&fit=crop') right center / cover no-repeat;
+    background-size: cover, 50% 100%, 50% 100%;
+    background-position: center, left, right;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
+    position: relative;
+}
+
+/* 현대자동차 로고 추가 */
+.banner::before {
+    content: '';
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 120px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Hyundai_Motor_Company_logo.svg/1200px-Hyundai_Motor_Company_logo.svg.png') center / contain no-repeat;
+    opacity: 0.9;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 10;
 }
 
 .banner-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
 }
 
 .banner-content p {
     font-size: 1.3rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+
 
 /* 컨테이너 */
 .container {
