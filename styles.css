@@ -56,11 +56,10 @@ body {
 
 /* 배너 섹션 */
 .banner {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
-                url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=400&fit=crop') left center / cover no-repeat,
-                url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&h=400&fit=crop') right center / cover no-repeat;
-    background-size: cover, 50% 100%, 50% 100%;
-    background-position: center, left, right;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%),
+                url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=400&fit=crop') left center / 50% 100% no-repeat,
+                url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&h=400&fit=crop') right center / 50% 100% no-repeat;
+    background-color: #1e3c72;
     height: 400px;
     display: flex;
     align-items: center;
@@ -70,22 +69,39 @@ body {
     position: relative;
 }
 
-/* 현대자동차 로고 추가 */
+/* 왼쪽 상단: 현대자동차 로고 */
 .banner::before {
     content: '';
     position: absolute;
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 120px;
-    height: 120px;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Hyundai_Motor_Company_logo.svg/1200px-Hyundai_Motor_Company_logo.svg.png') center / contain no-repeat;
-    opacity: 0.9;
+    left: 30px;
+    top: 30px;
+    width: 100px;
+    height: 100px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Hyundai_Motor_Company_logo.svg/1024px-Hyundai_Motor_Company_logo.svg.png') center / contain no-repeat;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+}
+
+/* 오른쪽 상단: 현대자동차 울산공장 */
+.banner::after {
+    content: '';
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 150px;
+    height: 80px;
+    background: url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=300&h=150&fit=crop') center / cover no-repeat;
+    border-radius: 10px;
+    border: 3px solid white;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .banner-content {
     position: relative;
-    z-index: 10;
+    z-index: 5;
 }
 
 .banner-content h2 {
